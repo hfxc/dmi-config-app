@@ -1,3 +1,5 @@
+import { Grid, Button, Slider } from '@material-ui/core';
+
 const DigitalMusicInterface = (props) => {
     const { dmiSpecification } = props;
     const { name, inputMethods } = dmiSpecification;
@@ -5,9 +7,9 @@ const DigitalMusicInterface = (props) => {
     return (
         <div>
             <p>{ name }</p>
-            <div>
-                { inputMethods.map(input => mapInputToComponent(input)) }
-            </div>
+            <Grid container spacing={5} justify="center">
+                { inputMethods.map(input => <Grid item key={input.$id}>{mapInputToComponent(input)}</Grid>) }
+            </Grid>
         </div>
     );
 };
@@ -26,7 +28,11 @@ const mapInputToComponent = (input) => {
 const mapDiscreteInputToComponent = (input) => {
     switch (input.physicalType) {
         case 'button':
-            return <div>Button</div>
+            return (
+                <Button variant="contained" color="secondary">
+                    { input.note }
+                </Button>
+            )
         default:
             throw new Error("unknown physical type for discrete input");
     }
@@ -35,7 +41,17 @@ const mapDiscreteInputToComponent = (input) => {
 const mapContinuousInputToComponent = (input) => {
     switch (input.physicalType) {
         case 'knob':
-            return <div>Slider</div>
+            return (
+                <Slider style={{ width: 250 }}
+                    min={ input.minRange }
+                    max={ input.maxRange }
+                    marks={ [
+                        { value: input.minRange, label: input.minRange.toString() },
+                        { value: input.maxRange, label: input.maxRange.toString() }
+                    ] }
+                    aria-labelledby="continuous-slider"
+                />
+            )
         default:
             throw new Error("unknown physical type for continuous input");
     }
