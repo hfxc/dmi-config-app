@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
 
-      <DigitalMusicInterface dmiSpecification={dmiSpecificationJson} />
+      <DigitalMusicInterface specification={dmiSpecificationJson} />
 
     </div>
   );

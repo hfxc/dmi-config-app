@@ -1,8 +1,8 @@
 import { Grid, Button, Slider } from '@material-ui/core';
 
 const DigitalMusicInterface = (props) => {
-    const { dmiSpecification } = props;
-    const { name, inputMethods } = dmiSpecification;
+    const { specification } = props;
+    const { name, inputMethods } = specification;
 
     return (
         <div>
