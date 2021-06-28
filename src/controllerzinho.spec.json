@@ -1,0 +1,94 @@
+{
+    "$id": "4f35087a-726b-4fff-923a-b600ff188506",
+    "name": "ControllerzinhoMDF",
+    "inputMethods": [
+        {
+            "$id": "input-0",
+            "type": "discrete",
+            "physicalType": "button",
+            "note": 40,
+            "event": "noteOn"
+        },
+        {
+            "$id": "input-1",
+            "type": "discrete",
+            "physicalType": "button",
+            "note": 41,
+            "event": "noteOn"
+        },
+        {
+            "$id": "input-2",
+            "type": "discrete",
+            "physicalType": "button",
+            "note": 42,
+            "event": "noteOn"
+        },
+        {
+            "$id": "input-3",
+            "type": "discrete",
+            "physicalType": "button",
+            "note": 36,
+            "event": "noteOn"
+        },
+        {
+            "$id": "input-4",
+            "type": "discrete",
+            "physicalType": "button",
+            "note": 37,
+            "event": "noteOn"
+        },
+        {
+            "$id": "input-5",
+            "type": "discrete",
+            "physicalType": "button",
+            "note": 38,
+            "event": "noteOn"
+        },
+        {
+            "$id": "input-6",
+            "type": "continuous",
+            "physicalType": "knob",
+            "minRange": 0,
+            "maxRange": 127
+        },
+        {
+            "$id": "input-7",
+            "type": "continuous",
+            "physicalType": "knob",
+            "minRange": 0,
+            "maxRange": 127
+        }
+    ],
+    "outputMethods": [
+        {
+            "$id": "output-0",
+            "type": "discrete",
+            "physicalType": "led lamp"
+        },
+        {
+            "$id": "output-1",
+            "type": "discrete",
+            "physicalType": "led lamp"
+        },
+        {
+            "$id": "output-2",
+            "type": "discrete",
+            "physicalType": "led lamp"
+        },
+        {
+            "$id": "output-3",
+            "type": "discrete",
+            "physicalType": "led lamp"
+        },
+        {
+            "$id": "output-4",
+            "type": "discrete",
+            "physicalType": "led lamp"
+        },
+        {
+            "$id": "output-5",
+            "type": "discrete",
+            "physicalType": "led lamp"
+        }
+    ]
+}
